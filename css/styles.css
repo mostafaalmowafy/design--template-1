@@ -1,0 +1,669 @@
+/*
+    ===============================
+            Public Styles
+    ===============================
+*/
+:root{
+    --main-color:#eb5424;
+}
+* , *:after , *:before {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.margin-bottom {
+    margin-block-end: 20px;
+}
+
+/*
+    ===============================
+            header Styles
+    ===============================
+*/
+
+header {
+    padding: 20px 0;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #000
+}
+
+header .logo {
+    width: 50%;
+    float: left;
+}
+
+header .logo h2{
+    font-size: 30px;
+    font-weight: bold
+}
+
+header input , header label {
+    position: absolute;
+    top: 13px;
+    right: 25px;
+}
+
+header input {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 15px;
+    height: 15px;
+    background: url('../images/Navbar/open.png') no-repeat ;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+}
+
+header input:checked ~ nav {
+    display: block;
+}
+
+header input:checked ~ label {
+    background: url('../images/Navbar/close.png') no-repeat ;
+    background-size: cover;
+}
+
+header nav {
+    width: 50%;
+    float: left;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: block;
+    color: #222;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #eb5424;
+}
+/* Media for Navbar Style */ 
+@media (max-width : 991px) {
+    header .logo {
+        width: 100%;
+        float: none;
+    }
+    
+    header nav {
+        width: 100%;
+        float:  none;
+        margin-top: 20px;
+        display: none
+    }
+    header label {
+        display: block;
+    }
+    header nav ul li {
+        display: block;
+        text-align: center;
+    }
+}
+/*
+    ===============================
+            landing Styles
+    ===============================
+*/
+.landing{
+    background-image: url(/images/home/home-bg.jpg);
+    background-size: cover;
+    height: calc(100vh - 80px);
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+.landing .content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.landing .content h2{
+    font-size: 60px;
+    font-weight: bold;
+    color: #5e5e5e;
+    min-width: 600px;
+}
+.landing .content h4{
+    font-size: 35px;
+    color: #eb5424;
+    margin-block-end: 30px;
+
+}
+.landing .content p{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #888;
+    margin-block-end: 60px;
+
+
+}
+.landing .content p span{
+    color: #000
+}
+.landing .content button{
+    background: #eb5424;
+    color: #fff;
+    font-size: 18px;
+    width: 150px;
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 10px 15px rgb(160, 160, 160);
+}
+.landing .content button:hover{
+    background: rgb(80, 136, 248);
+    /* color: #eb5424 */
+}
+@media (max-width:768px) {
+    .landing .content h2 {
+        font-size: 40px;
+        min-width: 380px;
+    }
+    
+    .landing .content h4 {
+        font-size: 20px
+    }
+    
+    .landing .content p{
+        font-size: 15px
+    }
+}
+
+@media (max-width:575px) {
+    .landing .content h2 {
+        font-size: 30px;
+    }
+}
+@media (max-width:375px) {
+    .landing .content h2 {
+        min-width: 300px;
+    }
+}
+/*
+    ===============================
+            Work Styles
+    ===============================
+*/
+.work{
+    background: #fff;
+    padding: 50px 0;
+}
+.work h2{
+    font-size: 60px;
+    margin-inline-start: 60px;
+    margin-block-end: 30px;
+}
+.work h2 span{
+    font-weight: normal
+}
+.work .boxs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill ,350px);
+    column-gap: 60px;
+    justify-content: center;
+}   
+.work .boxs .box{
+    margin-top: 40px;
+    padding: 100px 40px;
+    border: 1px solid #888;
+    box-sizing: border-box;
+    text-align: center;
+    margin-inline-end: 60px;
+    
+}
+.work .boxs .box i{
+    color: #888;
+    margin-block-end: 30px;
+}
+.work .boxs .box h4{
+    font-size: 25px;
+    color: #eb5424;
+    margin-block-end: 20px;
+}
+.work .boxs .box hr{
+    width: 60%;
+    margin: auto;
+    margin-block-end: 20px;
+}
+.work .boxs .box p{
+    font-size: 14px;
+    color: #888;
+    padding: 20px
+}
+@media (max-width:1440px){
+    .work .boxs .box{
+        margin-inline-end: 40px;
+    }
+}
+@media (max-width:768px){
+    .work h2{
+        font-size: 50px;
+        margin-block-end: 30px;
+
+    }
+}
+/*
+    ===============================
+            Portfolio Styles
+    ===============================
+*/
+.portfolio{
+    background-color:#f8f8f8 ;
+    padding-top: 40px;
+}
+.portfolio h2{
+    text-align: center;
+    font-size: 35px;
+}
+.portfolio h2 span{
+    font-weight: normal;
+}
+.portfolio ul{
+    list-style: non;
+    margin: 40px 0px;
+    text-align: center;
+}
+.portfolio ul li{
+    display: inline;
+    width: 100px;
+    padding: 10px;
+}
+.portfolio ul li:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+.portfolio .boxs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio .boxs div{
+    font-size: 0px;
+    width: 460px;
+    position: relative;
+}
+.portfolio .boxs div img{
+    width: 100%;
+}
+.portfolio .boxs div .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(235,84,36 , 0.5);
+    font-size: 15px;
+    opacity: 0;
+}
+.portfolio .boxs div .overlay span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    display: block;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 15px 25px rgb(56, 55, 55);
+}
+.portfolio .boxs div .overlay:hover {
+    opacity: 1
+}
+@media (max-width:575px) {
+    .portfolio ul li {
+        display: block;
+        margin: auto
+    }
+}
+/*
+    ===============================
+        Profile + Skills Styles
+    ===============================
+*/
+.profile_skills {
+    padding: 50px 0;
+    overflow: hidden;
+}
+.profile_skills h2{
+    font-size: 40px; 
+    margin-bottom: 40px
+}
+.profile_skills h2 span{
+    font-weight: normal;
+}
+.profile_skills .profile ,.profile_skills .skills {
+    width: 50%;
+    float: left;
+}
+.profile_skills .profile ul{
+    list-style-type: none;
+}
+.profile_skills .profile ul li {
+    margin-block-end: 20px;
+}
+.profile_skills .profile ul li span{
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+
+}
+.profile_skills .profile ul li .web{
+    font-weight: normal;
+    color: var(--main-color);
+}
+.profile_skills .skills p{
+    font-size: 15px;
+    columns: #888;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.profile_skills .skills .bar{
+    padding: 10px 0;
+    margin-block-end: 10px;
+    position: relative;
+}
+.profile_skills .skills .bar .title{
+    float: left;
+    margin-bottom: 5px;
+}
+.profile_skills .skills .one::after{
+    content: "100%";
+    position: absolute;
+    top: -8px;
+    right: 0;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    color: white;
+    width: 40px;
+}
+.profile_skills .skills .one::before{
+    content: "";
+    position: absolute;
+    border: solid 20px ;
+    border-color: transparent var(--main-color) transparent transparent;
+    right: 0px;
+    top: -8px;
+}
+.profile_skills .skills .two::after{
+    content: "90%";
+    position: absolute;
+    top: -8px;
+    right: 0;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    color: white;
+    width: 40px;
+}
+.profile_skills .skills .two::before{
+    content: "";
+    position: absolute;
+    border: solid 20px ;
+    border-color: transparent var(--main-color) transparent transparent;
+    right: 0px;
+    top: -8px;
+}
+.profile_skills .skills .three::after{
+    content: "80%";
+    position: absolute;
+    top: -8px;
+    right: 0;
+    background-color: var(--main-color);
+    padding: 5px 10px;
+    color: white;
+    width: 40px;
+}
+.profile_skills .skills .three::before{
+    content: "";
+    position: absolute;
+    border: solid 20px ;
+    border-color: transparent var(--main-color) transparent transparent;
+    right: 0px;
+    top: -8px;
+}
+.profile_skills .skills .bar .parent{
+    height: 2px;
+    width: 100%;
+    background-color:#f8f8f8;
+    position: relative;
+    clear: left;
+}
+.profile_skills .skills .bar .parent span{
+    background-color: var(--main-color);
+    height: 100%;position: absolute;
+    left: 0;
+}
+@media (max-width:768px) {
+    .profile_skills .profile , 
+    .profile_skills .skills {
+        width: 100%;
+        float: none;
+        
+    }
+    .profile_skills .profile {
+        margin-bottom: 20px;
+    }
+}
+/*
+    ===============================
+            Creative Styles
+    ===============================
+*/
+.creative {
+    height: 550px;
+    background: url('../images/creative/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.creative .content {
+    padding-block-start: 100px;
+    width: 50%;
+    float: right;
+}
+
+.creative .content h2 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-block-end: 20px ;
+}
+
+.creative .content h2 span {
+    font-weight: normal;
+}
+.creative .content h4 {
+    font-size: 40px;
+    color: #eb5424;
+    margin-bottom: 20px;
+    margin-block-end: 20px ;
+}
+
+.creative .content p {
+    color: #000;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.creative .content p a {
+    text-decoration: none;
+}
+@media (max-width:991px) {
+    .creative {
+        height: auto
+    }
+    .creative .content {
+        width: 100%;
+        padding: 20px 0;
+        float: none
+    }
+    
+    .creative .content h4 {
+        font-size: 30px
+    }
+}
+/*
+    ===============================
+            Socail Styles
+    ===============================
+*/
+.social-media{
+    display: flex;
+    margin-block-end: 40px;
+}
+.social-media .social{
+    padding: 100px 0 100px 60px;
+    width: 33%;
+}
+.social-media .social.face {
+    background: #3b5998;
+}
+
+.social-media .social.twitter {
+    background: #498cbf;
+}
+
+.social-media .social.pin {
+    background: #cc2127;
+}
+.social-media .social .icon {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    color: #888;
+    float: left;
+    margin-right: 10px;
+}
+.social-media .social p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+.social-media .social p span {
+    display: block;
+    margin-bottom: 8px;
+}
+.social-media .social p span.info2 {
+    font-weight: normal
+}
+@media (max-width:991px) {
+    .social-media {
+        flex-direction: column;
+    }
+    .social-media .social {
+        width: 100%;
+    }
+}
+/*
+    ===============================
+            Drop Styles
+    ===============================
+*/
+.dorp{
+    padding: 50px 0;
+    text-align: center;
+}
+.drop h2{
+    font-size: 60px;
+    margin-block-end: 30px;
+}
+.drop form{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.drop form input {
+    box-sizing: border-box;
+    outline: 0;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.drop form .form-input input {
+    width: 49%;
+}
+.drop form .form-input input[type=text] {
+    float: left;
+}
+
+.drop form .form-input input[type=email] {
+    float: right;
+}
+.drop form .sub {
+    width: 100%;
+}
+.drop form textarea {
+    width: 100%;
+    outline: 0;
+    background: #ccc;
+    padding: 5px;
+    margin-block-end: 10px;
+    box-sizing: border-box;
+}
+.drop form input[type=submit] {
+    width: 50%;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #888;
+    cursor: pointer;
+    box-shadow: 0px 2px 20px rgba(109, 107, 107, 0.705);
+}
+@media (max-width:575px) {
+    .drop h2 {
+        font-size: 40px
+    }
+    
+    .drop form .form-input input {
+        width: 100%
+    }
+    
+    .drop form {
+        width: 90%
+    }
+}
+@media (min-width:1440px){
+    .drop form input[type=submit] {
+        width: 40%;
+    }
+}
+/*
+    ===============================
+            Drop Styles
+    ===============================
+*/
+
+.footer {
+    text-align: center;
+    margin: 80px 0 0;
+    padding: 40px;
+    border: solid #888;
+    border-width: 1px 0px;
+    width: 100%;
+}
+
+.footer p {
+    color: #888
+}
